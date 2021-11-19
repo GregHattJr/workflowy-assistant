@@ -32,4 +32,7 @@ listOfBullets = ['A','B','C']
 
 # Add a list of new bullets under a parent node.
 WF.add_new_bullet(parent_id, listOfBullets)
+
+# Please close the process after all operations.
+WF.close_browser()
 ```

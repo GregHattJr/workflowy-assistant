@@ -92,8 +92,6 @@ class WorkFlowyAssistant(object):
         # Time to save new nodes
         time.sleep(5)
 
-        self.browser.quit()
-
     def __click_button(self, xpath: str):
         self.browser.find_element_by_xpath(xpath).click()
 
@@ -101,12 +99,14 @@ class WorkFlowyAssistant(object):
         try:
             element = WebDriverWait(self.browser, 10).until(EC.visibility_of_element_located((By.XPATH, xpath)))
         except:
-            print(f'Element {xpath} not found.')
+            print('Error: element not found in XPATH.')
             self.browser.quit()
-            exit()
 
     def __fill_text_box(self, xpath: str, text_to_input: str):
         self.browser.find_element_by_xpath(xpath).send_keys(text_to_input)
+
+    def close_browser(self):
+        self.browser.close()
 
 
 if __name__ == '__main__':
