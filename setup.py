@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 # This call to setup() does all the work
 setup(
     name="workflowy-assistant",
-    version="0.0.3",
+    version="0.0.4",
     description="Helps you automate your WorkFlowy.",
     long_description=long_description,
     long_description_content_type="text/markdown",
